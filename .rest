@@ -1,0 +1,18 @@
+# Get all the contacts
+GET https://node-api-uur9.onrender.com/api/contacts
+Accept: application/json
+
+###
+
+# Get a contact by ID
+GET https://node-api-uur9.onrender.com/api/contacts/{id}
+Accept: application/json
+
+{
+    "_id":"65a29a072db7261376618422",
+    "firstName":"Fer",
+    "lastName":"Juarez",
+    "email":"fer944@gmail.com",
+    "favoriteColor":"Red",
+    "birthday":"1996-04-15T05:00:00.000Z"
+}
