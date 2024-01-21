@@ -1,18 +1,45 @@
 # Get all the contacts
-GET https://node-api-uur9.onrender.com/api/contacts
+GET http://localhost:3000/api/contacts
 Accept: application/json
 
 ###
 
 # Get a contact by ID
-GET https://node-api-uur9.onrender.com/api/contacts/{id}
+GET http://localhost:3000/api/contacts/65a29a072db7261376618422
+Accept: application/json
+
+###
+
+# Create a new contact
+POST http://localhost:3000/api/create-contact
+Content-Type: application/json
 Accept: application/json
 
 {
-    "_id":"65a29a072db7261376618422",
-    "firstName":"Fer",
-    "lastName":"Juarez",
-    "email":"fer944@gmail.com",
-    "favoriteColor":"Red",
-    "birthday":"1996-04-15T05:00:00.000Z"
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "favoriteColor": "Blue",
+    "birthday": "1990-01-01"
 }
+
+###
+
+# Update an existing contact
+PUT http://localhost:3000/api/update-contact/65a29a072db7261376618422
+Content-Type: application/json
+Accept: application/json
+
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "jane.doe@example.com",
+    "favoriteColor": "Green",
+    "birthday": "1991-02-02"
+}
+
+###
+
+# Delete a contact
+DELETE http://localhost:3000/api/delete-contact/65a29a072db7261376618422
+Accept: application/json
